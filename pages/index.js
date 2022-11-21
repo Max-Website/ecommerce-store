@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Footer, HeroBanner, HomeIntro } from "../components";
+import { Footer, HeroBanner, HomeIntro, InfoBox } from "../components";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
       <HeroBanner />
       <div className="max-w-5xl px-3 flex flex-col justify-center items-center">
         <HomeIntro />
+        <InfoBox />
       </div>
       <Footer />
     </div>

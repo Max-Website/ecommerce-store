@@ -1,27 +1,16 @@
-import React from 'react'
+import React from "react";
+import { faSearch, faTruck } from "@fortawesome/free-solid-svg-icons";
+import InfoItem from "./InfoItem";
 
 const InfoBox = () => {
   return (
-    <div>
-        <div>
-            <div>
-                <div>
-                    <i className=''></i>
-                </div>
-                <div>
-                    <h6>Follow Us On Instagram</h6>
-                    <p>Stay up to date with out release</p>
-                </div>
-            </div>
-            <div>
-
-            </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div className="flex flex-wrap justify-center items-center w-full border-solid border-2 border-sky-500">
+        <InfoItem title={'Follow Us On Instagram'} desc={'Stay up to date with out release'} faIcon={faSearch} />
+        <InfoItem title={'Fast Shipping'} desc={'Stay up to date with out release'} faIcon={faSearch} />
+        <InfoItem title={'Need Assistance'} desc={'Stay up to date with out release'} faIcon={faSearch} />
+        <InfoItem title={'View Return Policy'} desc={'Stay up to date with out release'} faIcon={faSearch} />
     </div>
-  )
-}
+  );
+};
 
-export default InfoBox
+export default InfoBox;
