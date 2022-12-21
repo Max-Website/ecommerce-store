@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer'
 import React from 'react'
 import {Link} from 'react-router-dom';
 
@@ -42,7 +41,7 @@ export const ProductPage = ({classification, data}) => {
             </div>
             <div class="pr-20 pl-20 pb-20 mr-10 ml-10 mb-10 pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
                 {dummyData.map((data) => (
-                    <div class="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-110">
+                    <div class="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105">
                         <img class="w-full" src='productImage.jpg' alt="Mountain" />
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">{data.title}</div>
