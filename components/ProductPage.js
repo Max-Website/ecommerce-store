@@ -39,7 +39,7 @@ export const ProductPage = ({classification, data}) => {
             <div className='title pl-10 ml-20 mt-20 pt-20'>
                 <h1 className={'text-4xl'}>{classification}</h1>
             </div>
-            <div class="pr-20 pl-20 pb-20 mr-10 ml-10 mb-10 pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
+            <div className="pr-20 pl-20 pb-20 mr-10 ml-10 mb-10 pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
                 {dummyData.map((data) => (
                     <div key={data.id} className="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105">
                         <img className="w-full" src='productImage.jpg' alt="Mountain" />
