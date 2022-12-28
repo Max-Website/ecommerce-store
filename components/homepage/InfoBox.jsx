@@ -4,7 +4,7 @@ import InfoItem from "./InfoItem";
 
 const InfoBox = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center w-full border-solid border-2 border-sky-500">
+    <div className="flex flex-wrap justify-center items-center w-full">
         <InfoItem title={'Follow Us On Instagram'} desc={'Stay up to date with out release'} faIcon={faSearch} />
         <InfoItem title={'Fast Shipping'} desc={'Stay up to date with out release'} faIcon={faSearch} />
         <InfoItem title={'Need Assistance'} desc={'Stay up to date with out release'} faIcon={faSearch} />
