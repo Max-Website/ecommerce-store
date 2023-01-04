@@ -5,7 +5,7 @@ const HeroBanner = () => {
     <section className="dark:bg-gray-800 dark:text-gray-100 h-screen w-full">
       <div className="container mx-auto flex flex-col items-center justify-center px-4 py-16 text-center h-full">
         <h1 className="text-4xl font-bold leading-none sm:text-5xl">
-          World's Best Handcrafted Jewelry
+          Worlds Best Handcrafted Jewelry
         </h1>
         <div className="flex flex-wrap justify-center mt-12">
           <button className="px-8 py-3 m-2 text-lg border square
