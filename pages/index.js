@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent } from "../components";
-import { ProductPage } from '../components/ProductPage'
+import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent, ProductPage } from "../components";
 import { Navbar } from '../components/navbar'
 
 export default function Home() {
