@@ -5,6 +5,10 @@ module.exports = {
   "./components/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
+      colors: {
+        brown: '#a1785c',
+        transparent: 'transparent',
+      },
       minWidth: {
         720: '720px'
       },
