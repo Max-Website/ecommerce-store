@@ -33,7 +33,7 @@ const dummyData = [
                 img: 'productImage.jpg'
             }]
 
-export const ProductPage = ({classification, data}) => {
+const ProductPage = ({classification, data}) => {
     return (
         <div>
             <div className='title pl-10 ml-20 mt-20 pt-20'>
@@ -52,6 +52,8 @@ export const ProductPage = ({classification, data}) => {
             </div>
         </div>
     )}
+
+    export default ProductPage;
 
 
     // const dummyData = [{
