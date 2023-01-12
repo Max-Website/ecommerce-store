@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cart.slice';
 
 const dummyData = [
             {
@@ -34,20 +36,38 @@ const dummyData = [
             }]
 
 export const ProductPage = ({classification, data}) => {
+    const [isHovering, setIsHovered] = useState(false);
+    const onMouseEnter = () => setIsHovered(true);
+    const onMouseLeave = () => setIsHovered(false);
+    const dispatch = useDispatch();
+
+
     return (
         <div>
             <div className='title pl-10 ml-20 mt-20 pt-20'>
                 <h1 className={'text-4xl'}>{classification}</h1>
             </div>
-            <div class="pr-20 pl-20 pb-20 mr-10 ml-10 mb-10 pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
+            
+            <div className="pr-20 pl-20 pb-20 mr-10 ml-10 mb-10 pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
                 {dummyData.map((data) => (
-                    <div class="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105">
-                        <img class="w-full" src='productImage.jpg' alt="Mountain" />
+                    //<Link to={`/product-details/${data.id}`}>
+                    <div class="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105"  onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                        {isHovering ? (
+                            <img class="w-full" src='bracelet.jpg' alt="Ring" />
+                            ) : (
+                            <img class="w-full" src='productImage.jpg' alt="Ring" />
+                        )}
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">{data.title}</div>
                             <p class="text-gray-700 text-base">{data.price}</p>
+                            <button
+                            onClick={() => dispatch(addToCart(product))}
+                            >
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
+                    //</Link>
                 ))}
             </div>
         </div>
