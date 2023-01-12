@@ -11,6 +11,12 @@ module.exports = {
         offWhite: '#FAF9F6',
         transparent: 'transparent',
       },
+      minWidth: {
+        720: '720px'
+      },
+      minHeight: {
+        5: '5rem'
+      }
     },
   },
   plugins: [],
