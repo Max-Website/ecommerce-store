@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent, ProductPage } from "../components";
 import { Navbar } from '../components/navbar'
+import { ProductDetails } from '../components/ProductDetails'
+ 
 import { useEffect } from "react";
 
 export default function Home({ ringsData, necklacesData, braceletsData }) {

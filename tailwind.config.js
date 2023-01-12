@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         brown: '#a1785c',
+        darkBrown: '#80461B',
+        offWhite: '#FAF9F6',
         transparent: 'transparent',
       },
       minWidth: {
