@@ -16,7 +16,7 @@ export default function Home({ ringsData, necklacesData, braceletsData }) {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroBanner />
       <div className="max-w-5xl px-3 flex flex-col justify-center items-center">
         <HomeIntro />
