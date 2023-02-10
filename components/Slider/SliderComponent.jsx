@@ -1,36 +1,18 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
+import React, { useEffect, useState } from "react";
+import Responsive from "../shared/ProductSlider";
+import HeaderButton from "../shared/HeaderButton";
 
-const SliderComponent = () => {
-  const [nav1, setNav1] = useState();
-  const [nav2, setNav2] = useState();
+export default function SliderComponent({ product, productData = [] }) {
 
   return (
-    <div>
-      <h2>Slider Syncing (AsNavFor)</h2>
-      <h4>First Slider</h4>
-      <Slider asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
-        <div>
-          <h3>1</h3>
+      <div className="w-full">
+        <h3>Featured {product}</h3>
+        <div className="w-full px-7">
+          <Responsive productData={productData} />
         </div>
-        <div>
-          <h3>2</h3>
+        <div className="w-full flex justify-center items-center py-4">
+          <HeaderButton text={product} route={product} />
         </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </div>
+      </div>
   );
 };
-
-export default SliderComponent;

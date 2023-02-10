@@ -7,6 +7,8 @@ import { Navbar } from '../components/navbar'
 import { ProductDetails } from '../components/ProductDetails'
  
 import { useEffect } from "react";
+import ProductCard from "../components/shared/ProductCard";
+import Responsive from "../components/shared/ProductSlider";
 
 export default function Home({ ringsData, necklacesData, braceletsData }) {
 
@@ -16,16 +18,15 @@ export default function Home({ ringsData, necklacesData, braceletsData }) {
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      {/* <Navbar /> */}
       <HeroBanner />
-      <div className="max-w-5xl px-3 flex flex-col justify-center items-center">
+      <div className="max-w-6xl px-3 flex flex-col justify-center items-center w-full">
         <HomeIntro />
-        <InfoBox />
-        <SliderComponent />
+        <SliderComponent product={'rings'} productData={ringsData} />
+        <SliderComponent product={'necklaces'} productData={necklacesData} />
+        <SliderComponent product={'bracelets'} productData={braceletsData} />
       </div>
-      <ProductPage classification={'Rings'} data={ringsData}/>
-      <ProductPage classification={'Necklaces'} data={necklacesData}/>
-      <ProductPage classification={'Bracelets'} data={braceletsData}/>
+      
+      <InfoBox />
       <Footer />
     </div>
   );
