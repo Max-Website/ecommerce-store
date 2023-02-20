@@ -26,9 +26,9 @@ export const ProductPage = ({classification, data}) => {
                     <Link key={data._id} href={`/${classification.toLowerCase()}/${data._id}`} >
                     <div key={data._id} className="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                         {isHovering ? (
-                            <img class="w-full" src='bracelet.jpg' alt="Ring" />
+                            <img className="w-full" src='bracelet.jpg' alt="Ring" />
                             ) : (
-                            <img class="w-full" src={urlFor(data.image[0])} alt="Ring" />
+                            <img className="w-full" src={urlFor(data.image[0])} alt="Ring" />
                         )}
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">{data.name}</div>
