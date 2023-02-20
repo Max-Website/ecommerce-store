@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const InfoItem = ({ title, desc, faIcon }) => {
   return (
-    <div className="flex justify-center items-centers w-6/12 min-h-5 border-solid border-1 border-sky-500">
-      <div className="flex w-10 justify-center items-align">
+    <div className="flex justify-center items-centers min-h-5 min-w-[350px] w-[50%]">
+      <div className="flex w-10 justify-center items-align" style={{ padding: '0 2rem'}}>
         <FontAwesomeIcon
           icon={faIcon}
           style={{ fontSize: 40, color: "darkbblue" }}
