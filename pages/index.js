@@ -1,23 +1,34 @@
-import { client } from "../lib/client";
-import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent, ProductPage } from "../components";
 import { useEffect } from "react";
+import {
+  Footer,
+  HeroBanner,
+  HomeIntro,
+  InfoBox,
+  SliderComponent
+} from "../components";
+import { client } from "../lib/client";
+
+import { useStoreState } from "../context/context";
 
 export default function Home({ ringsData, necklacesData, braceletsData }) {
+  const { rings, setRings, necklaces, setNecklaces, bracelets, setBracelets } = useStoreState();
 
   useEffect(() => {
-    console.log('>>>>>>>>>>>>>>',necklacesData);
-  },[])
+    setRings(ringsData);
+    setNecklaces(necklacesData);
+    setBracelets(braceletsData);
+  }, [ringsData, necklacesData, braceletsData]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <HeroBanner />
       <div className="max-w-6xl px-3 flex flex-col justify-center items-center w-full">
         <HomeIntro />
-        <SliderComponent product={'rings'} productData={ringsData} />
-        <SliderComponent product={'necklaces'} productData={necklacesData} />
-        <SliderComponent product={'bracelets'} productData={braceletsData} />
+        <SliderComponent product={"rings"} productData={rings} />
+        <SliderComponent product={"necklaces"} productData={necklaces} />
+        <SliderComponent product={"bracelets"} productData={bracelets} />
       </div>
-      
+
       <InfoBox />
       <Footer />
     </div>
@@ -35,10 +46,10 @@ export const getServerSideProps = async () => {
   const braceletsData = await client.fetch(braceletsQuery);
 
   return {
-      props: {
-          ringsData,
-          necklacesData,
-          braceletsData
-      }
-  }
-}
+    props: {
+      ringsData,
+      necklacesData,
+      braceletsData,
+    },
+  };
+};
