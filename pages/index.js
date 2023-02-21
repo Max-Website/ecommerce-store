@@ -1,20 +1,12 @@
 import { client } from "../lib/client";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent, ProductPage } from "../components";
-import { Navbar } from '../components/navbar'
-import { ProductDetails } from '../components/ProductDetails'
- 
 import { useEffect } from "react";
-import ProductCard from "../components/shared/ProductCard";
-import Responsive from "../components/shared/ProductSlider";
 
 export default function Home({ ringsData, necklacesData, braceletsData }) {
 
   useEffect(() => {
-    console.log('what is rings data', braceletsData);
-  }, [braceletsData]);
+    console.log('>>>>>>>>>>>>>>',necklacesData);
+  },[])
 
   return (
     <div className="w-full flex flex-col justify-center items-center">

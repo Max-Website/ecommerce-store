@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default class Responsive extends Component {
   render() {
     const { productData } = this.props;
-    var settings = {
+    const settings = {
       dots: true,
       infinite: true,
       speed: 500,
@@ -44,29 +44,11 @@ export default class Responsive extends Component {
 
     return (
       <Slider {...settings}>
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
-
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
-
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
-
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
-
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
-
-        <div className="mr-2 my-5">
-          <ProductCard />
-        </div>
+        { productData.map((item, index)=> (
+          <div className="mr-2 my-5" key={index}>
+            <ProductCard item={item} />
+          </div>
+        ))}
       </Slider>
     );
   }
