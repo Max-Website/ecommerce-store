@@ -6,12 +6,12 @@ function HeaderButton({ text, route}) {
     <Link href={route}>
         <button 
             className="px-8 py-3 m-2 text-lg border square
-            bg-yellow-500 text-white 
+            bg-[#c78502] text-white 
             font-medium leading-tight uppercase rounded shadow-md 
-            hover:bg-yellow-600 hover:shadow-lg 
-            focus:bg-yellow-600 focus:shadow-lg 
+            hover:bg-[#f5a402] hover:shadow-lg 
+            focus:bg-[#f5a402] focus:shadow-lg 
             focus:outline-none focus:ring-0 
-            active:bg-yellow-700 active:shadow-lg 
+            active:bg-[#855903] active:shadow-lg 
             transition duration-150 ease-in-out">
                 { text }
         </button>

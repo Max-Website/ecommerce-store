@@ -145,3 +145,17 @@ table {
 .slick-list > div {
   margin-left: 0;
 }
+
+
+.main-header-section {
+	/* TODO: use an image from sanityCMS instead of hardcoding it */
+	background-image: url("https://cdn.shopify.com/s/files/1/2326/3805/products/product-image-1439176363_600x.jpg?v=1591699488");
+	background-color: rgba(104, 111, 121, 0.458);
+	object-fit: fill;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
