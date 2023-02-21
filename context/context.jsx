@@ -7,9 +7,9 @@ export function useProvideStoreState() {
   const [homepage, setHomePage] = useState({});
 
   //product data
-  const [rings, setRings] = useState();
-  const [bracelets, setBracelets] = useState();
-  const [necklaces, setNecklaces] = useState();
+  const [rings, setRings] = useState([]);
+  const [bracelets, setBracelets] = useState([]);
+  const [necklaces, setNecklaces] = useState([]);
 
   //cart data
   const initialCartState = {
