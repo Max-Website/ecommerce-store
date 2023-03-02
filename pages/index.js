@@ -1,31 +1,35 @@
-import { client } from "../lib/client";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { Footer, HeroBanner, HomeIntro, InfoBox, SliderComponent, ProductPage } from "../components";
-import { Navbar } from '../components/navbar'
-import { ProductDetails } from '../components/ProductDetails'
- 
 import { useEffect } from "react";
+import {
+  Footer,
+  HeroBanner,
+  HomeIntro,
+  InfoBox,
+  SliderComponent
+} from "../components";
+import { client } from "../lib/client";
+
+import { useStoreState } from "../context/context";
 
 export default function Home({ ringsData, necklacesData, braceletsData }) {
+  const { rings, setRings, necklaces, setNecklaces, bracelets, setBracelets } = useStoreState();
 
   useEffect(() => {
-    console.log('what is rings data', braceletsData);
-  }, [braceletsData]);
+    setRings(ringsData);
+    setNecklaces(necklacesData);
+    setBracelets(braceletsData);
+  }, [ringsData, necklacesData, braceletsData]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      {/* <Navbar /> */}
       <HeroBanner />
-      <div className="max-w-5xl px-3 flex flex-col justify-center items-center">
+      <div className="max-w-6xl px-3 flex flex-col justify-center items-center w-full">
         <HomeIntro />
-        <InfoBox />
-        <SliderComponent />
+        <SliderComponent product={"rings"} productData={rings} />
+        <SliderComponent product={"necklaces"} productData={necklaces} />
+        <SliderComponent product={"bracelets"} productData={bracelets} />
       </div>
-      <ProductPage classification={'Rings'} data={ringsData}/>
-      <ProductPage classification={'Necklaces'} data={necklacesData}/>
-      <ProductPage classification={'Bracelets'} data={braceletsData}/>
+
+      <InfoBox />
       <Footer />
     </div>
   );
@@ -42,10 +46,10 @@ export const getServerSideProps = async () => {
   const braceletsData = await client.fetch(braceletsQuery);
 
   return {
-      props: {
-          ringsData,
-          necklacesData,
-          braceletsData
-      }
-  }
-}
+    props: {
+      ringsData,
+      necklacesData,
+      braceletsData,
+    },
+  };
+};

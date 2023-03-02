@@ -10,7 +10,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="min-h-5 flex justify-center items-center">
+    <div className="min-h-5 flex justify-center items-center w-full">
       <p>© Copyright {currentYear} Designs by Max</p>
     </div>
   );

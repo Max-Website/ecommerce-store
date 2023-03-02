@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeIntro = () => {
   return (
-    <div className="py-8">
+    <div className="py-8 w-full">
       <h3 className="text-xl font-bold">What We Do</h3>
       <p className="text-base">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

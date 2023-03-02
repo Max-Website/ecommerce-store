@@ -8,14 +8,11 @@ export function ProductDetails({data}) {
       }, [data]);
 
     const dataSet = [...data]
-    console.log(dataSet)
 
     const router = useRouter()
     const currentId = router.query.id
-    console.log(currentId);
 
     const dataItem = dataSet.filter(x => x._id === currentId)[0]
-    console.log(dataItem)
 
 
     // state used for adding a ring

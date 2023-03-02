@@ -2,6 +2,9 @@ export default {
     name: 'rings',
     title: 'Rings',
     type: 'document',
+    initialValue: {
+        featured: false
+    },
     fields: [
         {
             name: 'image',
@@ -35,6 +38,11 @@ export default {
             name: 'description',
             title: 'Description',
             type: 'string'
+        },
+        {
+            name: 'featured',
+            title: 'Featured?',
+            type: 'boolean'
         }
     ]
 }
