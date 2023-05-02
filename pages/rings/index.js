@@ -14,13 +14,13 @@ export default function RingPage({ ringsData }) {
     setTimeout(()=>{
       setRings(ringsData);
       setIsLoading(false);
-    }, 2000)
+    }, 1000)
   }, [ringsData]);
 
   return (
-    <>
+    <div className="h-full w-full">
       {  isLoading ? <LoadingSpinner /> :  <ProductPage classification={"Rings"} data={rings} /> }
-    </>
+    </div>
   );
 }
 
